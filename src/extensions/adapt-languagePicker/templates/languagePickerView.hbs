@@ -1,0 +1,19 @@
+<div class="languagepicker-inner">
+  <div class="languagepicker-title">
+    <div class="languagepicker-title-inner">
+      {{{ displayTitle }}}
+    </div>
+  </div>
+  <div class="languagepicker-body">
+    <div class="languagepicker-body-inner">
+      {{{ body }}}
+    </div>
+  </div>
+  <div class="languagepicker-languages">
+    {{#each _langauges}}
+    <button class="languagepicker-language {{_language}}" value="{{_language}}">
+      {{{ displayName }}}
+    </button>
+    {{/each}}
+  </div>
+</div>
