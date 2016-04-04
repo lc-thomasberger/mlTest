@@ -91,7 +91,7 @@ define([
 					}
 
 					var dataAsString = JSON.stringify(suspendDataStore);
-					return (suspendDataRestored) ? scorm.setSuspendData(dataAsString) : false;
+					return (suspendDataRestored || name.toLowerCase() === "lang") ? scorm.setSuspendData(dataAsString) : false;
 			}
 		},
 
