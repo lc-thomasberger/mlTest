@@ -1083,5 +1083,20 @@
 		"_pageLevelProgress": {
 			"_isEnabled": true
 		}
+	},
+	{
+		"_id": "c-lp-0",
+		"_parentId": "b-lp-0",
+		"_type": "component",
+		"_component": "text",
+		"_classes": "",
+		"_layout": "full",
+		"title": "Introduction",
+		"displayTitle": "Lang Picker",
+		"body": "Adapt allows you to combine text and graphic components on the scrolling page to create rich and varied learning experiences. In addition, a wide range of interactive components are also available to help encourage deeper engagement with the material.<br><br>These presentation components can be structured in any way to help you create learning experiences that meet the needs of your learners.",
+		"instruction": "Scroll down to see what presentation components are available as part of the Version 2.0 core bundle.",
+		"_pageLevelProgress": {
+			"_isEnabled": true
+		}
 	}
 ]

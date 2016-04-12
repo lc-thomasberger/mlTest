@@ -58,5 +58,23 @@
 		"_pageLevelProgress": {
 			"_isEnabled": true
 		}
+	},
+	{
+		"_id": "co-lp",
+		"_parentId": "course",
+		"_type": "page",
+		"_classes": "assessment",
+		"title": "Lang Picker",
+		"displayTitle": "Lang Picker",
+		"pageBody": "",
+		"body": "",
+		"_isAvailable": false,
+		"_graphic": {
+			"src": "course/en/images/menu_thumb.jpg",
+			"alt": "Placeholder graphic."
+		},
+		"linkText": "View",
+		"durationLabel": "",
+		"duration": ""
 	}
 ]

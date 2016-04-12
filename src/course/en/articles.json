@@ -58,5 +58,14 @@
 		"title": "a-20",
 		"displayTitle": "",
 		"body": ""
+	},
+	{
+		"_id": "a-lp-0",
+		"_parentId": "co-lp",
+		"_type": "article",
+		"_classes": "",
+		"title": "",
+		"displayTitle": "",
+		"body": ""
 	}
 ]
