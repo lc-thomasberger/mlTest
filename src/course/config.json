@@ -2,7 +2,7 @@
     "_defaultLanguage": "en",
     "_defaultDirection": "ltr",
     "_languagePicker": {
-      "_isEnabled": true,
+      "_isEnabled": false,
       "displayTitle": "Please choose a language",
       "body": "This course is available in the following languages",
       "_langauges": [
