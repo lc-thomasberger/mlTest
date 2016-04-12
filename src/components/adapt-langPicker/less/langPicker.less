@@ -1,0 +1,36 @@
+.langPicker-component {
+  
+	.languagepicker-inner {
+		
+    .languagepicker-widget {
+      overflow: auto;
+    }
+    
+		.responsive-layout;
+		
+		.languagepicker-title {
+			margin: 0 1%;
+			padding: @menu-title-padding-top 0px @menu-title-padding-bottom;
+			.languagepicker-title-inner {
+				font-size: (@font-size*3);
+				line-height: (@font-size*3 + 10px);
+			}
+		}
+		.languagepicker-body {
+			margin: 0 1%;
+			padding: @menu-body-padding-top 0px;
+			.languagepicker-body-inner {
+			}
+		}
+		.languagepicker-languages {
+			.languagepicker-language {
+				margin: (@button-margin-top*0.5) 1% (@button-margin-bottom*0.5);
+				width: 48%;
+				float: left;
+				@media all and (max-width:(@device-width-small - 1px)) {
+						width: 98%;
+				}
+			}
+		}
+	}
+}

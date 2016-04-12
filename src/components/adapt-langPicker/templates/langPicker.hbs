@@ -1,0 +1,12 @@
+<div class="languagepicker-inner component-inner">
+  {{> component this}}
+  <div class="languagepicker-widget component-widget">
+    <div class="languagepicker-languages">
+      {{#each _langauges}}
+      <button class="languagepicker-language {{_language}}" value="{{_language}}">
+        {{{ displayName }}}
+      </button>
+      {{/each}}
+    </div>
+  </div>
+</div>
