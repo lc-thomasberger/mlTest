@@ -1,33 +1,29 @@
 define([
   'coreJS/adapt',
-  'coreViews/componentView'
-], function(Adapt, ComponentView) {
+  'coreViews/componentView',
+  '../../../extensions/adapt-languagePicker/js/languagePickerModel'
+], function(Adapt, ComponentView, LanguagePickerModel) {
 
     var LangPicker = ComponentView.extend({
+
+        events: {
+          "click .languagepicker-language": "onLanguageClick"
+        },
+
+        onLanguageClick: function (event) {
+          var userLanguage = $(event.target).val();
+          this.model.setDefaultLanguage(userLanguage);
+          this.model.reloadCourseData();
+        },
 
         preRender: function() {
             // Checks to see if the text should be reset on revisit
             this.checkIfResetOnRevisit();
+            this.model = _.extend(this.model, LanguagePickerModel.prototype);
         },
 
         postRender: function() {
             this.setReadyStatus();
-
-            // Check if instruction or title or body is set, otherwise force completion
-            var cssSelector = this.$('.component-instruction').length > 0
-                ? '.component-instruction'
-                : (this.$('.component-title').length > 0
-                ? '.component-title'
-                : (this.$('.component-body').length > 0
-                ? '.component-body'
-                : null));
-
-            if (!cssSelector) {
-                this.setCompletionStatus();
-            } else {
-                this.model.set('cssSelector', cssSelector);
-                this.$(cssSelector).on('inview', _.bind(this.inview, this));
-            }
         },
 
         // Used to check if the text should reset on revisit
@@ -37,24 +33,6 @@ define([
             // If reset is enabled set defaults
             if (isResetOnRevisit) {
                 this.model.reset(isResetOnRevisit);
-            }
-        },
-
-        inview: function(event, visible, visiblePartX, visiblePartY) {
-            if (visible) {
-                if (visiblePartY === 'top') {
-                    this._isVisibleTop = true;
-                } else if (visiblePartY === 'bottom') {
-                    this._isVisibleBottom = true;
-                } else {
-                    this._isVisibleTop = true;
-                    this._isVisibleBottom = true;
-                }
-
-                if (this._isVisibleTop && this._isVisibleBottom) {
-                    this.$(this.model.get('cssSelector')).off('inview');
-                    this.setCompletionStatus();
-                }
             }
         }
 
