@@ -1083,5 +1083,84 @@
 		"_pageLevelProgress": {
 			"_isEnabled": true
 		}
+	},
+	{
+		"_id": "c-lp-0",
+		"_parentId": "b-lp-0",
+		"_type": "component",
+		"_component": "langPicker",
+		"_classes": "",
+		"_layout": "left",
+		"title": "",
+		"displayTitle": "fr-Please choose a language",
+		"body": "fr-This course is available in the following languages",
+		"instruction": "fr-Scroll down to see what presentation components are available as part of the Version 2.0 core bundle.",
+		"_pageLevelProgress": {
+			"_isEnabled": true
+		},
+		"_langauges": [
+			{
+				"_language": "en",
+				"_direction": "ltr",
+				"displayName": "English",
+				"warningTitle": "en-Change language?",
+				"warningMessage": "en-Changing the language will reset course progress.<br><br>Would you like to proceed?",
+				"_buttons": {
+					"yes": "en-Yes",
+					"no": "en-No"
+				}
+			},
+			{
+				"_language": "de",
+				"_direction": "ltr",
+				"displayName": "Deutsch",
+				"warningTitle": "de-Change language?",
+				"warningMessage": "de-Changing the language will reset course progress.<br><br>Would you like to proceed?",
+				"_buttons": {
+					"yes": "de-Yes",
+					"no": "de-No"
+				}
+			},
+			{
+				"_language": "fr",
+				"_direction": "ltr",
+				"displayName": "Français",
+				"warningTitle": "fr-Change language?",
+				"warningMessage": "fr-Changing the language will reset course progress.<br><br>Would you like to proceed?",
+				"_buttons": {
+					"yes": "fr-Yes",
+					"no": "fr-No"
+				}
+			},
+			{
+				"_language": "it",
+				"_direction": "ltr",
+				"displayName": "Italiano",
+				"warningTitle": "it-Change language?",
+				"warningMessage": "it-Changing the language will reset course progress.<br><br>Would you like to proceed?",
+				"_buttons": {
+					"yes": "it-Yes",
+					"no": "it-No"
+				}
+			}
+		]
+	},
+	{
+		"_id": "c-lp-0-r",
+		"_parentId": "b-lp-0",
+		"_type": "component",
+		"_component": "graphic",
+		"_classes": "",
+		"_layout": "right",
+		"title": "",
+		"displayTitle": "",
+		"body": "",
+		"instruction": "",
+		"_graphic": {
+			"large": "course/en/images/single_width.jpg",
+			"small": "course/en/images/single_width.jpg",
+			"alt": "Placeholder graphic.",
+			"attribution": ""
+		}
 	}
 ]

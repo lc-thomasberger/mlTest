@@ -1090,7 +1090,7 @@
 		"_type": "component",
 		"_component": "langPicker",
 		"_classes": "",
-		"_layout": "full",
+		"_layout": "left",
 		"title": "",
 		"displayTitle": "Please choose a language",
 		"body": "This course is available in the following languages",
@@ -1144,5 +1144,23 @@
 				}
 			}
 		]
+	},
+	{
+		"_id": "c-lp-0-r",
+		"_parentId": "b-lp-0",
+		"_type": "component",
+		"_component": "graphic",
+		"_classes": "",
+		"_layout": "right",
+		"title": "",
+		"displayTitle": "",
+		"body": "",
+		"instruction": "",
+		"_graphic": {
+			"large": "course/en/images/single_width.jpg",
+			"small": "course/en/images/single_width.jpg",
+			"alt": "Placeholder graphic.",
+			"attribution": ""
+		}
 	}
 ]
