@@ -16,7 +16,7 @@ define([
     
     initialize: function () {
       this.listenTo(Adapt, 'remove', this.remove);
-      this.render();
+      // this.render();
     },
     
     render: function () {
