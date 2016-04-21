@@ -12,8 +12,8 @@
   - ~~navigate to #/~~
   - check if this works with startcontroller
   
-- accessibility
-  - not yet working for the languagePickerView when the course loads
+- ~~accessibility~~
+  - ~~not yet working for the languagePickerView when the course loads~~
 
 - handle completion
   - reset assessment?
