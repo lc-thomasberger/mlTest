@@ -16,27 +16,20 @@ define([
       "_isEnabled": false,
       "displayTitle": "",
       "body": "",
-      "_langauges": [],
+      "_languages": [],
       "_defaultLanguage": "en",
       "_defaultDirection": "ltr"
     },
     
-    initialize: function () {
-      var languagePickerConfig = Adapt.config.get('_languagePicker');
-      
+    initialize: function () {     
       this.listenTo(Adapt.config, 'change:_defaultLanguage', this.onConfigChange);
       
       this.set('_defaultLanguage', Adapt.config.get('_defaultLanguage'));
       this.set('_defaultDirection', Adapt.config.get('_defaultDirection'));
-      
-      this.set('_isEnabled', languagePickerConfig._isEnabled);
-      this.set('displayTitle', languagePickerConfig.displayTitle);
-      this.set('body', languagePickerConfig.body);
-      this.set('_langauges', languagePickerConfig._langauges);
     },
 
     getLanguageDetails: function (language) {
-      var _languages = this.get('_langauges');
+      var _languages = this.get('_languages');
       return _.find(_languages, function (item) {
         return item._language == language
       });
