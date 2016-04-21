@@ -11,6 +11,7 @@
 - reset Bookmarking
   - ~~navigate to #/~~
   - check if this works with startcontroller
+    - bug: when language changes during a course, navigates to #/ and not to specified page
   
 - ~~accessibility~~
   - ~~not yet working for the languagePickerView when the course loads~~
