@@ -43,8 +43,27 @@ define([
         _showIcon: true
       }
 
-      Adapt.trigger('notify:prompt', promptObject);
+      
+      //keep active element incase the user cancels - usually navigation bar icon
+      this.$finishFocus = $.a11y.state.focusStack.pop();
+      //move drawer close focus to #focuser
+      $.a11y.state.focusStack.push($("#focuser"));
+
+      Adapt.once('drawer:closed', function() {
+        //wait for drawer to fully close
+        _.delay(function(){
+          //show yes/no popup
+          Adapt.once('popup:opened', function() {
+            //move popup close focus to #focuser
+            $.a11y.state.focusStack.pop();
+            $.a11y.state.focusStack.push($("#focuser"));  
+          });
+
+          Adapt.trigger('notify:prompt', promptObject);
+        }, 250);
+      });
       Adapt.trigger('drawer:closeDrawer');
+      
     },
     
     onDoChangeLanguage: function () {
@@ -61,6 +80,13 @@ define([
     
     onDontChangeLanguage: function () {
       this.remove();
+
+      //wait for notify to close fully
+      _.delay(_.bind(function(){
+        //focus on navigation bar icon
+        this.$finishFocus.a11y_focus();
+      }, this), 500);
+
     }
     
   }, {
