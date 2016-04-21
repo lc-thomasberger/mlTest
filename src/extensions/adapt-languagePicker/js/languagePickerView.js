@@ -1,7 +1,7 @@
 define([
   'coreJS/adapt',
-  'backbone'
-], function(Adapt, Backbone) {
+  './accessibilityView'
+], function(Adapt, accessibilityView) {
   
   var LanguagePickerView = Backbone.View.extend({
     
@@ -12,6 +12,8 @@ define([
     className: 'languagepicker',
     
     initialize: function () {
+      this.initializeAccessibility();
+
       this.listenTo(Adapt, 'remove', this.remove);
       this.render();
     },
@@ -31,6 +33,8 @@ define([
     },
     
     onLanguageClick: function (event) {
+      this.destroyAccessibility();
+
       var userLanguage = $(event.target).val();
       // save language code in spoor
       // set config default language
@@ -38,6 +42,21 @@ define([
 
       // continue loading course
       Adapt.trigger('configModel:loadCourseData');
+    },
+
+
+    initializeAccessibility: function() {
+      $("html").addClass("in-languagepicker");
+
+      this.accessibilityView = new accessibilityView({
+        model:this.model
+      });
+    },
+
+    destroyAccessibility: function() {
+      $("html").removeClass("in-languagepicker");
+
+      this.accessibilityView.remove();
     }
     
   }, {
