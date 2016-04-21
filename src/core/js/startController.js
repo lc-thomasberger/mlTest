@@ -89,6 +89,12 @@ define([
     Adapt.once("adapt:start", function() {
         new StartController();
     });
+    
+    Adapt.once("app:resetSession", function() {
+        _.defer(function () {
+            new StartController();
+        })
+    });
 
     return StartController;
 
