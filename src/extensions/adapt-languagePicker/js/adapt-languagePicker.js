@@ -22,7 +22,7 @@ define([
     
       // stop default language loading
       Adapt.config.set("_canLoadData", false);
-      languagePickerModel = new LanguagePickerModel();
+      languagePickerModel = new LanguagePickerModel(Adapt.config.get('_languagePicker'));
       
       Adapt.on('router:page', setupNavigationView);
       Adapt.on('router:menu', setupNavigationView);
