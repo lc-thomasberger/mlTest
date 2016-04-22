@@ -12,6 +12,15 @@
 	.menu-header {
 		margin-bottom: -30px;
 		background-color: @background-color-inverted;
+		:lang(de) & {
+			background-color: spin(@background-color-inverted, 90);
+		}
+		:lang(fr) & {
+			background-color: spin(@background-color-inverted, 180);
+		}
+		:lang(it) & {
+			background-color: spin(@background-color-inverted, 270);
+		}
 	}
 
 	.menu-header-inner {
