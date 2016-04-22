@@ -3,7 +3,9 @@
 ## Setup
     - grunt build
     - grunt server
-    
+
+## [Live demo](https://rawgit.com/lc-thomasberger/mlTest/demo/build/scorm_test_harness.html)
+
 ## Design Feedback:
 Languagepicker View for initial selection very bare-bones, each Language is just a button. Each Button gets a lang-class, could be used to add Flag icons.
 
