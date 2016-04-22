@@ -113,23 +113,10 @@ define([
 			this.removeEventListeners();
 			this.setupEventListeners();
 			var sessionPairs = this.getSessionState();
-			/*
-				todo: reset Assessment?
-				
-				when inidividual assessemnt-id is used for each language, state can be persistantly tracked for each language. even if language is reset.
-				
-				score
-					- set to undefined || 0?
-					- keep previous value?
-				_isAssessmentPassed
-					- Assessment can be different in each language
-					- reset language should require users to repeat assessemnt
-				status
-					- based on Assessment required
-					- should be set to undefined
-				Assessment attempts
-					- should be reset
-			*/
+			
+			// hard reste of score and status
+			Adapt.offlineStorage.set("score", "undefined");
+			Adapt.offlineStorage.set("status", "incomplete");
 			Adapt.offlineStorage.set(sessionPairs);
 		},
 
