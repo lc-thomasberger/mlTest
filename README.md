@@ -5,7 +5,7 @@
     - grunt server
     
 ## Design Feedback:
-Languagepicker View for initial selection very bare bone, Each Language is just a button. Each Button gets a lang-class, could be used to add Flag icons.
+Languagepicker View for initial selection very bare-bones, each Language is just a button. Each Button gets a lang-class, could be used to add Flag icons.
 
 Flow of "changing the Language in a Course"
 - icon in the Navigationbar
