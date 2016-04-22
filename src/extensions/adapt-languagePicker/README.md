@@ -6,17 +6,16 @@
 
 - ~~language not always stored in offlineStorage~~
     ~~suspaenddata is not set before a value is read from offlinestorage~~
-    https://github.com/adaptlearning/adapt-contrib-spoor/blob/master/js/adapt-offlineStorage-scorm.js#L94
 
 - reset Bookmarking
   - ~~navigate to #/~~
-  - check if this works with startcontroller
+  - ~~check if this works with startcontroller~~
     - bug: when language changes during a course, navigates to #/ and not to specified page
-  
+
 - ~~accessibility~~
   - ~~not yet working for the languagePickerView when the course loads~~
 
-- handle completion
-  - reset assessment?
-  - reset score?
-  - reset status?
+- ~~handle completion~~
+  - reset score --> "undefined"
+  - reset status --> "incomplete"
+  - assessment Object remains in offlineStorage, so state can be restored and attempts can be tracked
